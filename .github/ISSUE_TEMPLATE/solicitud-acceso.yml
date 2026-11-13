@@ -1,0 +1,53 @@
+name: Solicitud de acceso a versiones privadas
+description: Pedir acceso o licencia para una o más versiones privadas de este proyecto.
+title: "[Acceso] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Este formulario abre una solicitud de acceso. La primera versión del proyecto es pública y gratuita; las versiones privadas se comparten caso por caso.
+  - type: input
+    id: proyecto
+    attributes:
+      label: Proyecto
+      description: Nombre de la familia o repositorio.
+      placeholder: CubeCell LoRaWAN
+    validations:
+      required: true
+  - type: input
+    id: versiones
+    attributes:
+      label: Versión o versiones solicitadas
+      description: Indicá las carpetas o el rango que necesitás.
+      placeholder: CubeCell-LoRaWAN-Node-v1.3
+    validations:
+      required: true
+  - type: dropdown
+    id: uso
+    attributes:
+      label: Tipo de uso
+      options:
+        - Evaluación personal
+        - Proyecto educativo
+        - Prototipo comercial
+        - Producción / integración
+        - Otro
+    validations:
+      required: true
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto y alcance
+      description: Contá qué querés construir, dónde se usará y qué necesitás del código.
+      placeholder: Descripción breve del proyecto, hardware, plazos y equipo.
+    validations:
+      required: true
+  - type: checkboxes
+    id: condiciones
+    attributes:
+      label: Condiciones
+      options:
+        - label: Entiendo que las versiones privadas no son de distribución libre y que el acceso se acuerda por escrito.
+          required: true
+        - label: Acepto no redistribuir el contenido sin autorización.
+          required: true

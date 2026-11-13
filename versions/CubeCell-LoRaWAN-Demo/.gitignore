@@ -1,0 +1,17 @@
+# Compilados
+build/
+.arduino/
+*.elf
+*.hex
+*.bin
+__pycache__/
+*.pyc
+.DS_Store
+*.log
+
+# Credenciales reales LoRaWAN (NO subir)
+credentials.h
+
+# Planes y auditorias (NO subir)
+PLAN.md
+AUDIT_REPORT.md
